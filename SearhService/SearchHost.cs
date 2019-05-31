@@ -9,7 +9,7 @@ using SearhService.HeartBeatService;
 
 namespace SearhService
 {
-    public class SearchHost : IAddressCallback
+    public class SearchHost :IAddressCallback
     {
         static DateTime startTime;
 
@@ -34,7 +34,7 @@ namespace SearhService
             try
             {
                 var heartClient = new AddressClient(new InstanceContext(new SearchHost()));
-
+                //var heartClient = new AddressClient(new InstanceContext(new MyAddressCallback()));
                 string search = ConfigurationManager.AppSettings["search"];
 
                 heartClient.AddSearch(search);

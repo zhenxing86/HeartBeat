@@ -74,6 +74,7 @@ namespace HeartBeatService
 
             lock (obj)
             {
+                Console.WriteLine("AddSearch:" + address);
                 //是否包含相同的Search地址
                 if (!search.Contains(address))
                 {
@@ -88,6 +89,7 @@ namespace HeartBeatService
 
         public void GetService(string address)
         {
+            Console.WriteLine("GetService:" + address);
             Timer timer = new Timer();
             timer.Interval = 1000;
             timer.Elapsed += (obj, sender) =>
